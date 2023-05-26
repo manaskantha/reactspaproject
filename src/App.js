@@ -1,10 +1,13 @@
 import "./styles.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ProductPage from "./pages/ProductPage";
+
+const router = createBrowserRouter([
+  { path: "/", element: <HomePage /> },
+  { path: "/products", element: <ProductPage /> },
+]);
 
 export default function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
