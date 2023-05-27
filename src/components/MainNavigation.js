@@ -28,6 +28,16 @@ export default function MainNavigation() {
                 Products
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/events"
+                className={({ isActive }) => {
+                  isActive ? "active" : undefined;
+                }}
+              >
+                Events Page
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>
