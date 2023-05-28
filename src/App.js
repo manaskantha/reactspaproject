@@ -7,6 +7,11 @@ import RootLayout from "./pages/Root";
 import ErrorPage from "./pages/Error";
 import ProductDetails from "./pages/ProductDetails";
 import EventsPage from "./eventcomponents/EventsPage";
+import EventDetailsPage from "./eventcomponents/EventDetailPage";
+import EditEventPage from "./eventcomponents/EditEventPage";
+import NewEventPage from "./eventcomponents/NewEventPage";
+import UserPage from "./usercomponents/UserPage";
+import UserRegistration from "./usercomponents/UserRegistration";
 
 const router = createBrowserRouter([
   {
@@ -16,9 +21,14 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <HomePage /> },
-      { path: "/products", element: <ProductPage /> },
+      { path: "products", element: <ProductPage /> },
       { path: "products/:productid", element: <ProductDetails /> },
-      { path: "/events", element: <EventsPage /> },
+      { path: "events", element: <EventsPage /> },
+      { path: "events/new", element: <NewEventPage /> },
+      { path: "events/:eventid/edit", element: <EditEventPage /> },
+      { path: "events/:eventid", element: <EventDetailsPage /> },
+      { path: "users", element: <UserPage /> },
+      { path: "users/new", element: <UserRegistration /> },
     ],
   },
 ]);
