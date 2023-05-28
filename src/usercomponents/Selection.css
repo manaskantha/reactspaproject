@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.select {
+  appearance: black;
+  background-color: none;
+  border: 1px solid;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 30%;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+}

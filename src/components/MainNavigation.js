@@ -35,7 +35,17 @@ export default function MainNavigation() {
                   isActive ? "active" : undefined;
                 }}
               >
-                Events Page
+                Events
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/users"
+                className={({ isActive }) => {
+                  isActive ? "active" : undefined;
+                }}
+              >
+                Users
               </NavLink>
             </li>
           </ul>
