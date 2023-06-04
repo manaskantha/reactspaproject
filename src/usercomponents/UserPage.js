@@ -6,6 +6,9 @@ export default function () {
       <p>
         <Link to="new">Register User</Link>
       </p>
+      <p>
+        <Link to="view">View Users</Link>
+      </p>
     </>
   );
 }

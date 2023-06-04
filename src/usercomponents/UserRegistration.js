@@ -23,7 +23,7 @@ const DUMMY_USERS = [
   },
 ];
 
-export default function () {
+export default function userRegistration() {
   const [userDetails, setUserDetails] = React.useState(DUMMY_USERS);
   //This is to get value from child component i.e BasicUserDetails
   const onBasicFormSubmitHandler = (basicUserInput) => {
