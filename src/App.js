@@ -12,6 +12,7 @@ import EditEventPage from "./eventcomponents/EditEventPage";
 import NewEventPage from "./eventcomponents/NewEventPage";
 import UserPage from "./usercomponents/UserPage";
 import UserRegistration from "./usercomponents/UserRegistration";
+import ViewUsers from "./usercomponents/ViewUsers";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       { path: "events/:eventid", element: <EventDetailsPage /> },
       { path: "users", element: <UserPage /> },
       { path: "users/new", element: <UserRegistration /> },
+      { path: "users/view", element: <ViewUsers /> },
     ],
   },
 ]);
