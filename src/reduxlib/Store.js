@@ -1,5 +1,5 @@
 import { createStore } from "redux";
-import {} from "./Reducer";
+import { counterSlice } from "./Reducer";
 
 const store = createStore(counterSlice.reducer);
 

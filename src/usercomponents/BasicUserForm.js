@@ -10,7 +10,7 @@ export default function BasicUserDetails(props) {
   const [gender, setGender] = React.useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event);
+    //console.log(event);
     const userData = {
       firstName: firstName,
       lastName: lastName,
