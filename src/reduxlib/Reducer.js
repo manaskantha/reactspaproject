@@ -1,21 +1,28 @@
-import {} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  value: 0,
-};
+const initialState = [
+  {
+    id: "u1",
+    firstName: "Peter",
+    lastName: "Jones",
+    dob: new Date(1994, 7, 14),
+    gender: "Male",
+  },
+  {
+    id: "u2",
+    firstName: "Sam",
+    lastName: "Smith",
+    dob: new Date(1988, 5, 11),
+    gender: "Male",
+  },
+];
 
 export const counterSlice = createSlice({
-  name: "value",
+  name: "USERS",
   initialState,
   reducers: {
-    increment(state) {
-      state.value++;
-    },
-    increase(state, action) {
-      state.value = state.value + action.payload;
-    },
-    decrease(state, action) {
-      state.value = state.value - action.payload;
+    addBasicDetails(state, action) {
+      state.USERS = action.payload;
     },
   },
 });

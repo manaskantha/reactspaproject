@@ -5,6 +5,8 @@ import BasicUserInputValidation from "./BasicUserInputValidation";
 import MainApp from "./UserEffect";
 import BasicUserDetails from "./BasicUserForm";
 import UserDetails from "./displayusers/DisplayUsers";
+import { useDispatch } from "react-redux";
+import { reducerActions } from "../reduxlib/Reducer";
 
 const DUMMY_USERS = [
   {
@@ -36,8 +38,14 @@ export default function userRegistration() {
       id: Math.random().toString(),
     };
     addUserDetailsToDB(basicUserInput);
-    console.log(enteredUserInput);
+    sendToReactStore(enteredUserInput);
+    //console.log(enteredUserInput);
   };
+
+  async function sendToReactStore(enteredUserInput) {
+    const dispatch = useDispatch();
+    dispatch(reducerActions.addBasicDetails(enteredUserInput));
+  }
 
   async function addUserDetailsToDB(basicUserInput) {
     const response = await fetch(

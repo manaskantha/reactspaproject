@@ -10,6 +10,7 @@ const UserDetails = (props) => {
   //   const filterChangeHandler = (selectedYear) => {
   //     setFilteredYear(selectedYear);
   //   };
+  console.log(props);
 
   return (
     <div>
